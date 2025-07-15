@@ -19,6 +19,81 @@ Bắt tay ba bước (three-way handshake) là quá trình dùng trong mạng TC
 - SYN-ACK: Server phản hồi bằng gói SYN-ACK.  
 - ACK: Client gửi gói ACK (xác nhận) lại cho server.  
 Sau ba bước này, kết nối được thiết lập.
+---
+
+## 1.1 Explain the OSI and TCP/IP models.
+*(Giải thích mô hình OSI và TCP/IP.)*
+
+**EN:**  
+The OSI (Open Systems Interconnection) model is a 7-layer theoretical framework that standardizes network communication:  
+1. **Physical:** Transmits bits over the physical medium.  
+2. **Data Link:** Ensures reliable link-to-link communication (MAC, error detection).  
+3. **Network:** Provides logical addressing and routing (IP).  
+4. **Transport:** Ensures reliable end-to-end delivery (TCP/UDP).  
+5. **Session:** Manages sessions and connections.  
+6. **Presentation:** Translates and formats data (encryption, encoding).  
+7. **Application:** Interfaces with user applications (HTTP, FTP, SMTP).  
+
+The TCP/IP model is a 4-layer practical model used on the Internet:  
+- **Network Interface:** Combines OSI’s Physical + Data Link.  
+- **Internet:** Equivalent to OSI’s Network.  
+- **Transport:** Same as OSI’s Transport.  
+- **Application:** Combines OSI’s Session, Presentation, Application.  
+
+TCP/IP is simpler and widely implemented, while OSI is used for conceptual understanding.
+
+**VI:**  
+Mô hình **OSI** (Open Systems Interconnection) là mô hình lý thuyết gồm 7 tầng chuẩn hóa giao tiếp mạng:  
+1. **Vật lý:** Truyền bit qua môi trường vật lý.  
+2. **Liên kết dữ liệu:** Đảm bảo liên kết đáng tin cậy giữa 2 nút (MAC, phát hiện lỗi).  
+3. **Mạng:** Định địa chỉ và định tuyến logic (IP).  
+4. **Giao vận:** Đảm bảo truyền dữ liệu tin cậy đầu-cuối (TCP/UDP).  
+5. **Phiên:** Quản lý các phiên kết nối.  
+6. **Trình diễn:** Dịch và định dạng dữ liệu (mã hóa, giải mã).  
+7. **Ứng dụng:** Giao diện với ứng dụng người dùng (HTTP, FTP, SMTP).  
+
+Mô hình **TCP/IP** là mô hình thực tế với 4 tầng, được dùng rộng rãi trên Internet:  
+- **Giao diện mạng:** Gộp tầng Vật lý + Liên kết dữ liệu của OSI.  
+- **Internet:** Tương ứng tầng Mạng của OSI.  
+- **Giao vận:** Giống tầng Giao vận OSI.  
+- **Ứng dụng:** Gộp các tầng Phiên, Trình diễn, Ứng dụng của OSI.  
+
+TCP/IP đơn giản hơn và được triển khai thực tế, OSI chủ yếu để lý giải khái niệm.
+
+---
+
+## 1.2 What are common TCP/IP attacks and defenses?
+*(Các kiểu tấn công TCP/IP thường gặp và cách phòng thủ.)*
+
+**EN:**  
+Common TCP/IP attacks include:  
+- **IP Spoofing:** Attacker forges source IP address to impersonate another host.  
+- **TCP SYN Flood (DoS):** Attacker floods server with SYN packets to exhaust resources.  
+- **Man-in-the-Middle (MITM):** Attacker intercepts and alters traffic between two parties.  
+- **Packet Sniffing:** Attacker eavesdrops on unencrypted traffic.  
+- **ICMP Flood/Smurf Attack:** Overloads the target with ICMP Echo requests.  
+
+Defenses include:  
+- Packet filtering firewalls and access control lists (ACLs).  
+- SYN cookies and connection rate limiting.  
+- Encryption (TLS/SSL, VPN) to prevent sniffing and MITM.  
+- Intrusion Detection/Prevention Systems (IDS/IPS).  
+- Disabling unused protocols/services and hardening configurations.
+
+**VI:**  
+Các kiểu tấn công **TCP/IP** thường gặp:  
+- **Giả mạo IP (IP Spoofing):** Kẻ tấn công giả địa chỉ IP nguồn để mạo danh máy khác.  
+- **TCP SYN Flood (DoS):** Gửi hàng loạt gói SYN làm cạn tài nguyên máy chủ.  
+- **Man-in-the-Middle (MITM):** Chặn và thay đổi dữ liệu giữa 2 bên giao tiếp.  
+- **Nghe trộm (Packet Sniffing):** Theo dõi lưu lượng chưa mã hóa.  
+- **ICMP Flood/Smurf:** Dội hàng loạt gói ICMP làm nghẽn máy đích.  
+
+Các biện pháp phòng thủ:  
+- Dùng tường lửa lọc gói và ACL để chặn gói bất thường.  
+- Áp dụng SYN cookies và giới hạn tốc độ kết nối.  
+- Mã hóa (TLS/SSL, VPN) để chống nghe trộm và MITM.  
+- Triển khai IDS/IPS để phát hiện/ngăn chặn xâm nhập.  
+- Vô hiệu hóa dịch vụ/giao thức không dùng và cấu hình bảo mật chặt chẽ.
 
 ---
 
