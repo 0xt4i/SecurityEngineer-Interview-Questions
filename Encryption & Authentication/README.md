@@ -278,7 +278,7 @@ Sau handshake, dữ liệu truyền được bảo mật.
 
 ---
 
-### 11. How does HMAC work?
+### 11. How does HMAC (Hash-based Message Authentication Code) work?
 **EN:**  
 HMAC (Hash-based Message Authentication Code) combines a secret key with a hash function to ensure both data integrity and authenticity.  
 The sender creates a hash of the message plus the secret key and sends both to the receiver, who computes the hash and checks if they match.
