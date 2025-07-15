@@ -21,7 +21,7 @@ Bắt tay ba bước (three-way handshake) là quá trình dùng trong mạng TC
 Sau ba bước này, kết nối được thiết lập.
 ---
 
-## 1.1 Explain the OSI and TCP/IP models.
+### 1.1 Explain the OSI and TCP/IP models.
 *(Giải thích mô hình OSI và TCP/IP.)*
 
 **EN:**  
@@ -62,7 +62,7 @@ TCP/IP đơn giản hơn và được triển khai thực tế, OSI chủ yếu 
 
 ---
 
-## 1.2 What are common TCP/IP attacks and defenses?
+### 1.2 What are common TCP/IP attacks and defenses?
 *(Các kiểu tấn công TCP/IP thường gặp và cách phòng thủ.)*
 
 **EN:**  
