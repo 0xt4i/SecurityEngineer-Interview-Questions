@@ -21,7 +21,7 @@ Bắt tay ba bước (three-way handshake) là quá trình dùng trong mạng TC
 Sau ba bước này, kết nối được thiết lập.
 ---
 
-### 1.1 Explain the OSI and TCP/IP models.
+### 1.1. Explain the OSI and TCP/IP models.
 *(Giải thích mô hình OSI và TCP/IP.)*
 
 **EN:**  
@@ -62,7 +62,7 @@ TCP/IP đơn giản hơn và được triển khai thực tế, OSI chủ yếu 
 
 ---
 
-### 1.2 What are common TCP/IP attacks and defenses?
+### 1.2. What are common TCP/IP attacks and defenses?
 *(Các kiểu tấn công TCP/IP thường gặp và cách phòng thủ.)*
 
 **EN:**  
@@ -97,6 +97,74 @@ Các biện pháp phòng thủ:
 
 ---
 
+### 1.3. Protocol Data Units per OSI/TCP Layer  
+*(Đơn vị dữ liệu theo từng tầng của mô hình OSI)*
+
+| **OSI Layer**          | **Vietnamese (Tiếng Việt)**   | **PDU (Đơn vị dữ liệu)**            |
+|-------------------------|--------------------------------|-------------------------------------|
+| 7. Application          | Ứng dụng                      | **Data / Dữ liệu**                 |
+| 6. Presentation         | Trình diễn                    | **Data / Dữ liệu**                 |
+| 5. Session              | Phiên                         | **Data / Dữ liệu**                 |
+| 4. Transport            | Giao vận                      | **Segment / Đoạn**                 |
+| 3. Network              | Mạng                          | **Packet / Gói**                   |
+| 2. Data Link            | Liên kết dữ liệu              | **Frame / Khung**                  |
+| 1. Physical             | Vật lý                        | **Bits / Bit**                     |
+
+#### TCP/IP Model Mapping  
+*(Tương ứng với mô hình TCP/IP, các PDU vẫn giữ nguyên như OSI:)*
+
+| **TCP/IP Layer**        | **Vietnamese (Tiếng Việt)**   | **PDU**                         |
+|--------------------------|--------------------------------|---------------------------------|
+| Application              | Ứng dụng                      | Data / Dữ liệu                 |
+| Transport                | Giao vận                      | Segment / Đoạn                 |
+| Internet                 | Internet                      | Packet / Gói                   |
+| Network Interface        | Giao diện mạng                | Frame/Bit / Khung/Bit          |
+
+---
+
+### 1.4 Explanation  
+*(Giải thích)*
+
+✅ **Layers 7 → 5 (Application, Presentation, Session)**  
+These layers handle high-level data used by applications, so the unit is simply called **Data (Dữ liệu).**
+
+✅ **Tầng 7 → 5 (Ứng dụng, Trình diễn, Phiên)**  
+Ba tầng này xử lý dữ liệu cấp cao của ứng dụng, vì vậy đơn vị dữ liệu gọi là **Dữ liệu (Data).**
+
+---
+
+✅ **Layer 4 (Transport)**  
+Breaks data into smaller pieces for transmission, called **Segments (Đoạn)** if TCP or **Datagrams** if UDP.
+
+✅ **Tầng 4 (Giao vận)**  
+Chia dữ liệu thành các phần nhỏ để truyền, gọi là **Đoạn (Segment)** với TCP hoặc **Datagram** với UDP.
+
+---
+
+✅ **Layer 3 (Network)**  
+Adds logical addressing (IP) and routes it as **Packets (Gói).**
+
+✅ **Tầng 3 (Mạng)**  
+Gắn địa chỉ logic (IP) và định tuyến dưới dạng **Gói (Packet).**
+
+---
+
+✅ **Layer 2 (Data Link)**  
+Adds physical addressing (MAC) and framing information, called **Frames (Khung).**
+
+✅ **Tầng 2 (Liên kết dữ liệu)**  
+Gắn địa chỉ vật lý (MAC) và thông tin khung, gọi là **Khung (Frame).**
+
+---
+
+✅ **Layer 1 (Physical)**  
+Converts everything to electrical/optical/radio signals, represented as **Bits (Bit).**
+
+✅ **Tầng 1 (Vật lý)**  
+Chuyển tất cả thành tín hiệu điện/quang/sóng, biểu diễn dưới dạng **Bit.**
+
+---
+ 
 ### 2. How do cookies work?
 **EN:**  
 Cookies are small pieces of data stored by a web browser at the request of a web server.  
